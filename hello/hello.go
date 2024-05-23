@@ -1,11 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+
+const sayHello = "Hello,"
 
 func Hello(name string) string {
-	return fmt.Sprintf("Hello, %s", name)
+	name = strings.TrimSpace(name)
+	if name == "" {
+		name = "World"
+	}
+
+	return fmt.Sprintf("%s %s", sayHello, name)
 }
 
 func main() {
-	fmt.Println(Hello("Sérgio"))
+	fmt.Println(Hello(" "))
 }
