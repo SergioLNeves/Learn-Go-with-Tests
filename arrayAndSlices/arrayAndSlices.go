@@ -18,5 +18,6 @@ func SumAllTails(numbersToSum ...[]int) []int {
 			sums = append(sums, Sum(tail))
 		}
 	}
+
 	return sums
 }
